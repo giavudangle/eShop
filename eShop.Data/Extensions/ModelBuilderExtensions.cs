@@ -1,4 +1,5 @@
 ﻿using eShop.Data.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -127,7 +128,47 @@ namespace eShop.Data.Extensions
                     SeoTitle = "Woman T Shirt",
                     CategoryId = 2
                 }
-                );   
+                );
+
+
+            // Identity Constants
+            const string ADMIN_NAME = "admin";
+            const string ADMIN_EMAIL = "danglegiavu@gmai.com";
+            const string ADMIN_PASSWORD = "admin";
+            const string ADMIN_GUID = "9B82C708-46FA-43ED-B71B-B2FFB02C2FF0";
+            const string ROLE_GUID = "F27B1B87-4C47-4E18-849D-6EF168C68AD8";
+
+            // Identity Data Seeding
+            modelBuilder.Entity<AppRole>().HasData(new AppRole
+            {
+                Id = new Guid(ROLE_GUID),
+                Name = ADMIN_NAME,
+                NormalizedName = ADMIN_NAME,
+                Description = "Admin Role"
+            });
+
+            var hasher = new PasswordHasher<AppUser>();
+ 
+            modelBuilder.Entity<AppUser>().HasData(new AppUser
+            {
+                Id = new Guid(ADMIN_GUID),
+                UserName = ADMIN_NAME,
+                NormalizedUserName = ADMIN_NAME,
+                Email = ADMIN_EMAIL,
+                NormalizedEmail = ADMIN_EMAIL,
+                EmailConfirmed = true,
+                PasswordHash = hasher.HashPassword(null, ADMIN_PASSWORD),
+                SecurityStamp = string.Empty,
+                FirstName = "Vu",
+                LastName = "Dang",
+                Dob = new DateTime(2000, 02, 22)
+            });
+
+            modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(new IdentityUserRole<Guid>
+            {
+                RoleId = new Guid(ROLE_GUID),
+                UserId = new Guid(ADMIN_GUID)
+            });
         }
     }
 }
