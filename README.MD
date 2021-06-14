@@ -13,6 +13,7 @@
 - dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 - dotnet add package Microsoft.EntityFrameworkCore.Design
 - dotnet add package Microsoft.EntityFrameworkCore.Tools
+
 ## Getting started
 - Clone code from Github
 - Open solution eShop.sln in Visual Studio 2019
