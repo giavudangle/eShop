@@ -1,13 +1,11 @@
-﻿using eShop.AppService.Catalog.Products.Dtos;
-using eShop.AppService.Catalog.Products.Dtos.Public;
-using eShop.AppService.Dtos;
+﻿
 using eShop.Data.EF;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using eShop.ViewModels.Common;
+using eShop.ViewModels.Catalog.Products;
 
 namespace eShop.AppService.Catalog.Products
 {
@@ -19,7 +17,7 @@ namespace eShop.AppService.Catalog.Products
             _context = context;
         }
 
-        public async Task<PagedResult<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request)
+        public async Task<PagedResult<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest request)
         {
             var query = from p in _context.Products
                         join pt in _context.ProductTranslations on p.Id equals pt.ProductId
