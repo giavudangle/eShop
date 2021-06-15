@@ -26,3 +26,4 @@
 - You need to change 3 projects to self-host profile.
 - Set multiple run project: Right click to Solution and choose Properties and set Multiple Project, choose Start for 3 Projects: BackendApi, WebApp and AdminApp.
 - Choose profile to run or press F5
+
