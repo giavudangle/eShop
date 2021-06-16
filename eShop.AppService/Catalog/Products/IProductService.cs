@@ -2,6 +2,7 @@
 using eShop.ViewModels.Catalog.ProductImages;
 using eShop.ViewModels.Catalog.Products;
 using eShop.ViewModels.Common;
+using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -44,7 +45,6 @@ namespace eShop.AppService.Catalog.Products
 
         Task<List<ProductViewModel>> GetLatestProducts(string languageId, int take);
 
-        Task<List<ProductViewModel>> GetAll();
 
     }
 }
