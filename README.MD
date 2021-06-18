@@ -1,10 +1,5 @@
 # Web bán hàng điện thoại online
 
-## Thành viên
-- Trần Luân Hy: 18DH110413
-- Hoàng Trần An Thiên: 18DH110447
-- Lê Quốc Anh: 18DH110446
-
 ## I. Mô tả đề tài
 
 <p> Ngày nay, công nghệ thông tin đã có những bước phát triển mạnh mẽ trong mọi phương diện nói chung ví dụ như : đời sống, công việc, giải trí, truyền thông, ... Và riêng với bán hàng, so với cách bán truyền thống thì nay doanh nghiệp, cửa hàng nhỏ lẻ nào cũng có một website để quáng bá, bán hàng trực tuyến sản phẩm và tương tác với người dùng. Nắm bắt được nhu cầu đó, nhóm em quyết định thực hiện đề tài: Xây dựng Website bán điện thoại online dùng công nghệ ASP.NET Core. Khi sử dụng trang web khách hàng sẽ cảm nhận được sự mới mẻ và thuận tiện của Website mang lại . Và website cũng dễ dàng cung cấp thông tin chi tiết sản phẩm giúp khách hàng có thể thanh toán trực tiếp qua thẻ tín dụng hoặc nhận hàng rồi thanh toán.</p>
